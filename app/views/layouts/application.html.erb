@@ -15,8 +15,13 @@
         丫丫游记
       </a>
       <ul class="nav left">
+        <li><%= link_to  "音乐","/music" %></li>
+        <li><%= link_to  "视频","/video" %></li>
+        <li><%= link_to  "读书","/book" %></li>
+        <li><%= link_to  "文摘","/digest" %></li>
+        <li><%= link_to  "图片","/image" %></li>
         <li><%= link_to  t("navbar.about"),"/about" %></li>
-         <li><%= link_to  "","#" %></li>
+         
       </ul>
       <ul class="nav right">
        <% if current_user %>
@@ -38,15 +43,15 @@
       $(".notice").fadeOut("slow");
   }
  setTimeout(hideNotice, 2000);
-</script>
+</script>     
  <%= yield %>
 
+ 
 
  <div class="footer">
-   <div class="container">
-    欢迎关注
+   <div style="text-align:center" class="container ">
+    欢迎关注此网站
   </div>
 </div>
-
 </body>
 </html>
