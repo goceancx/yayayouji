@@ -1,8 +1,5 @@
 class PageController < ApplicationController
-	def welcome
-		@issues = Issue.all.reverse
-		@songs = Song.all
-	end
+
 
 	def travelnote
 		@issues = Issue.all.reverse
