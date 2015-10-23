@@ -50,7 +50,32 @@
   height: 600px;
   margin-top: -80px;
 }
-.page-welcome .navbar {
+
+.navbar {
   background: transparent;
 }
+.page-travelnote .navbar {
+  background: transparent;
+}
+
+.page-music .navbar {
+  background: transparent;
+}
+
+.page-video .navbar {
+  background: transparent;
+}
+
+.page-book .navbar {
+  background: transparent;
+}
+
+.page-digest .navbar {
+  background: transparent;
+}
+
+.page-image .navbar {
+  background: transparent;
+}
+
 

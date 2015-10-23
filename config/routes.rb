@@ -7,7 +7,12 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'page#welcome'
+  root 'page#travelnote'
+  get '/music' => 'page#music'
+  get '/video' => 'page#video'
+  get '/book' => 'page#book'
+  get '/digest' => 'page#digest'
+  get '/image' => 'page#image'
   get '/about' => 'page#about'
 
   get 'signup' => 'users#signup' , :as => 'signup'
@@ -19,6 +24,9 @@ Rails.application.routes.draw do
   resources :users , only: [:create]
    # issues
   resources :issues
+
+  # songs
+   get '/songs/:id' => "songs#show", :as => "song"
 
   # comments
   post '/issues/:issue_id/comments' => 'comments#create'
