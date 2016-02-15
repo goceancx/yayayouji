@@ -1,13 +1,12 @@
 Rails.application.routes.draw do
 
 
-
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   root 'page#travelnote'
+  get '/letter' => 'page#letter'
   get '/music' => 'page#music'
   get '/video' => 'page#video'
   get '/book' => 'page#book'
@@ -27,7 +26,15 @@ Rails.application.routes.draw do
 
   # songs
    get '/songs/:id' => "songs#show", :as => "song"
-
+   
+   get '/letter/1' => "letters#show1"
+   get '/letter/2' => "letters#show2"
+   get '/letter/3' => "letters#show3"
+   get '/letter/4' => "letters#show4"
+   get '/letter/5' => "letters#show5"
+   get '/letter/6' => "letters#show6"
+   get '/letter/7' => "letters#show7"
+   get '/letter/8' => "letters#show8"
   # comments
   post '/issues/:issue_id/comments' => 'comments#create'
 

@@ -1,6 +1,4 @@
 class PageController < ApplicationController
-
-
 	def travelnote
 		@issues = Issue.all.reverse
 		@songs = Song.all
@@ -30,5 +28,9 @@ class PageController < ApplicationController
 	def image
 		@issues = Issue.all.reverse
 		@songs = Song.all
+	end
+
+	def letter
+		
 	end
 end

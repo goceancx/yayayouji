@@ -20,38 +20,41 @@
         <li><%= link_to  "读书","/book" %></li>
         <li><%= link_to  "文摘","/digest" %></li>
         <li><%= link_to  "图片","/image" %></li>
+        <% if current_user&& (current_user.name == "Ocean-藏心" ||current_user.name == "丫丫") %>  
+        <li><%= link_to  "信","/letter" %></li>  
+        <% end %>
         <li><%= link_to  t("navbar.about"),"/about" %></li>
-         
+
       </ul>
       <ul class="nav right">
        <% if current_user %>
-         <li><%= link_to current_user.name , "#" %></li>
-         <li><%= link_to t("navbar.logout"),logout_path ,method: "delete" %></li>
+       <li><%= link_to current_user.name , "#" %></li>
+       <li><%= link_to t("navbar.logout"),logout_path ,method: "delete" %></li>
        <% else %>
-         <li><%= link_to t("navbar.login") , login_path %></li>
-         <li><%= link_to t("navbar.signup"),signup_path %></li>
+       <li><%= link_to t("navbar.login") , login_path %></li>
+       <li><%= link_to t("navbar.signup"),signup_path %></li>
        <% end %>
      </ul>
    </div>
  </div>
-<% if flash.notice %>
-  <div class="notice"><%= flash.notice %></div>
-<% end %>
-<script>
+ <% if flash.notice %>
+ <div class="notice"><%= flash.notice %></div>
+ <% end %>
+ <script>
   $('.home-banner').anystretch();
-   var hideNotice = function(){
-      $(".notice").fadeOut("slow");
+  var hideNotice = function(){
+    $(".notice").fadeOut("slow");
   }
- setTimeout(hideNotice, 2000);
+  setTimeout(hideNotice, 2000);
 </script>     
- <%= yield %>
+<%= yield %>
 
- 
 
- <div class="footer">
-   <div style="text-align:center" class="container ">
-    欢迎关注此网站
-  </div>
+
+<div class="footer ">
+ <div style="text-align:center" class="container ">
+  欢迎关注此网站
+</div>
 </div>
 </body>
 </html>
