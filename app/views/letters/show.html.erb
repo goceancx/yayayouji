@@ -6,6 +6,10 @@
 </div>
 <% if current_user&& (current_user.name == "Ocean-藏心" ) %>
 <div class="write-letter-bt">
+<%= link_to '编辑', edit_letter_path(@letter) %>	
+</div>
+
+<div class="write-letter-bt">
 <%= link_to '删除', letter_path(@letter), method: :delete, data: { confirm: 'Are you sure?' } %>	
 </div>
  
