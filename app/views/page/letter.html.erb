@@ -1,10 +1,9 @@
 <div class="toolbar-bg"></div>
-
-<div class="write-letter-bt">
 <% if current_user&& (current_user.name == "Ocean-藏心") %>
+<div class="write-letter-bt">
 	<%= link_to "写信", "/letters/new"%>
-<% end %>	
 </div>
+<% end %>	
 
 <div class="letter-list-container  clearfix">
   <%= render partial: 'letter_list', locals: { letters: @letters } %>
