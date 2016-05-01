@@ -1,18 +1,30 @@
 class LettersController < ApplicationController
-	 def show1 
+	 
+ 	# def new
+  # 		@letter = Letter.new
+  # 	end
+	def show
+	  	@letter =Letter.find(params[:id])
+	    # @comments = @issue.comments
 	 end
-	 def show2 
-	 end
-	 def show3 
-	 end
-	 def show4 
-	 end
-	 def show5 
-	 end
-	 def show6 
-	 end
-	 def show7 
-	 end
-	 def show8 
-	 end
+
+
+	def new
+	  	@letter =Letter.new
+	end
+
+	def create
+		Letter.create(letter_params)
+   		redirect_to :letterlist
+	end
+
+	def destroy
+		i = Letter.find(params[:id])
+		i.destroy
+		redirect_to :letterlist
+	end
+private 
+    def letter_params
+      params.require(:letter).permit(:title, :content)
+    end
 end

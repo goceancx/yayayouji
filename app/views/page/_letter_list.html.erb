@@ -1,0 +1,18 @@
+<% if current_user&& (current_user.name == "Ocean-藏心" ||current_user.name == "丫丫") %>
+<div class="issue-list">
+  <% letters.each do |axx| %>   
+   <article class="issue clearfix">
+      <div class="body">
+        <h5 class="title">
+        <%= link_to axx.title,axx %>
+        </h5>
+      </div>
+    </article>
+  <% end %>
+  </div>
+<% end %>
+
+
+
+
+

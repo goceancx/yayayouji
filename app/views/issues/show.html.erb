@@ -2,7 +2,6 @@
   <div class="container">
     <%= @issue.title %>
 
-
     <% if current_user&&current_user.name == "Ocean-藏心"   %>
     <%= link_to 'edit', edit_issue_path(@issue), class: "btn btn-primary" %>
     <%= link_to 'destroy', issue_path(@issue), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-primary" %>

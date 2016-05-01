@@ -31,6 +31,7 @@ class PageController < ApplicationController
 	end
 
 	def letter
-		
+		@letters=Letter.all.reverse
 	end
+	
 end

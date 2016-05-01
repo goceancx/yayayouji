@@ -44,14 +44,12 @@
 }
 
 .lc-header {
-
   float: left;
   font-size: 20px;
   color: #eeb;
   text-align: bottom;
 }
 .lc-img{
-  
   margin:  auto ;
   margin-top: 78px;
   display: block;   
@@ -67,6 +65,11 @@
   color: #616161;
  text-align: bottom; 
 }
+.lc-inline{
+  position: relative;
+  display: block;
+  float: right;
+}
 
 
 .art-young{
@@ -76,6 +79,42 @@
 
 .footer-container{
     position: absolute;
-    bottom:15px;
+    bottom:35px;
     width: 240px;
 }
+.footer-link{
+    position: absolute;
+    bottom:15px;
+    
+    width: 240px;
+}
+
+.toolbar-bg{
+  height: 80px;
+  background: linear-gradient(to bottom,#0e7bef,#0d73da);
+  margin-top: -80px;
+}
+.letter-list-container{
+  margin: 30px auto;
+  width: 960px;
+  
+
+}
+.write-letter-bt{
+    width: 80px;
+    text-align: center;
+    margin: 15px auto;
+    padding: 15px 15px;
+    font-size: 1.2em;
+    font-weight: 300;
+    font-family: "museo-sans-condensed";
+    border-radius: 5px;
+    color: #fff;
+    background: rgba(0,0,0,0.1);
+    border: 1px solid transparent;
+    &:hover {
+      border: 1px solid rgba(0,0,0,0.2);
+    }
+}
+
+
